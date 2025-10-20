@@ -2,8 +2,14 @@
 
 int** create(size_t rows, size_t cols){
 	int** result = new int*[rows];
-	for(size_t i = 0; i < rows; ++i){
-		result[i] = new int[cols];}}
+	size_t i = 0;
+	try{
+		for(size_t i = 0; i < rows; ++i){
+			result[i] = new int[cols];}}
+	catch(){
+	remove(result,i);
+	throw();}
+	return result;}
 
 void remove(int** m, size_t rows, size_t cols){
 	for(size_t i = 0; i < rows; ++i){	
