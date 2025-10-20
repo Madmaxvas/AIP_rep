@@ -1,7 +1,9 @@
 #include <iostream>
 
 int** create(size_t rows, size_t cols){
-int** result = nullptr;}
+	int** result = new int*[rows];
+	for(size_t i = 0; i < rows; ++i){
+		result[i] = new int[cols];}}
 
 void remove(int** m, size_t rows, size_t cols){
 	for(size_t i = 0; i < rows; ++i){	
@@ -9,12 +11,12 @@ void remove(int** m, size_t rows, size_t cols){
 	delete []m;}
 
 void input(int** m, size_t rows, size_t cols){
-for (size_t i = 0; i < rows && (std::cin); ++i){
+	for (size_t i = 0; i < rows && (std::cin); ++i){
         	for(size_t j=0; j < cols && (std::cin); ++j ){
 			std::cin >> m[i][j];}}}
 
 void output(const int * const * m, size_t rows, size_t cols){
-std::cout << rows << " " << cols;}
+	std::cout << rows << " " << cols;}
 
 int main(){
 
